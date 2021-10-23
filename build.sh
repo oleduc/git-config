@@ -9,7 +9,7 @@
 
 set -e
 
-image="alpine/git"
+image="alpine/git-config"
 
 LATEST_TAG=$(git ls-remote --tags origin |awk -F \/ '{print $NF}'|grep ^1.0. |sort -Vr|head -1)
 if [[ -z "${LATEST_TAG}" ]]
